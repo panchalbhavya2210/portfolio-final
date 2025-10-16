@@ -1,0 +1,149 @@
+:root {
+	--primary-font: 'Fira Code', sans-serif;
+	--primary-color: #ff5557;
+	--secondary-color: red;
+	--white-color: #fff;
+	--black-color: #000;
+	--transition: all 0.5s ease;
+}
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+}
+
+ul,
+ol {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+	color: var(--white-color);
+}
+html {
+	text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+	scroll-behavior: smooth;
+}
+
+ul[class],
+ol[class] {
+	list-style: none;
+	padding: 0;
+}
+
+body {
+	font-family: var(--primary-font);
+	background: var(--black-color);
+	color: var(--white-color);
+	height: 1000vh;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.hs,
+h6,
+.h6 {
+	font-family: var(--primary-font);
+	font-weight: 400;
+	margin: 0;
+}
+
+.primary-btn {
+	position: relative;
+	display: inline-block;
+	padding: 8px 16px;
+	font-family: var(--primary-font);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 100%;
+	letter-spacing: 0;
+	border: 1px solid var(--primary-color);
+	background: transparent;
+	color: var(--white-color);
+	cursor: pointer;
+	overflow: hidden;
+	transition: var(--transition), var(--transition);
+}
+
+/* Background pseudo-element */
+.primary-btn::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	/*background-image: url('https://i.pinimg.com/originals/4b/5d/a6/4b5da63844b3760bb5dcc9ef2e6fa402.gif');*/
+	background-color: var(--primary-color);
+	z-index: -1;
+	transition: var(--transition), var(--transition);
+}
+
+/* On hover: expand from left to right */
+.primary-btn:hover::before {
+	width: 100%;
+	left: 0;
+}
+
+/* On unhover: shrink from right to left */
+.primary-btn:not(:hover)::before {
+	width: 0;
+	left: auto;
+	right: 0;
+}
+
+/* Optional: change text color for contrast */
+.primary-btn:hover {
+	color: var(--black-color);
+}
+
+.container {
+	width: 100%;
+	max-width: 1064px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+.lg-hide {
+	display: none;
+}
+.sm-hide {
+	display: block;
+}
+@media only screen and (max-width: 991px) {
+	.container {
+		max-width: 720px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.lg-hide {
+		display: block;
+	}
+	.lg-hide.flex {
+		display: flex;
+	}
+	.sm-hide {
+		display: none;
+	}
+	.container {
+		max-width: 520px;
+	}
+}
