@@ -1,0 +1,169 @@
+.banner {
+	padding: 194px 0;
+}
+
+.banner-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.banner-wrap__left {
+	width: 100%;
+	max-width: 60%;
+	padding-right: 40px;
+}
+.banner-wrap__right {
+	width: 100%;
+	max-width: 40%;
+	position: relative;
+}
+.banner-wrap__right img {
+	margin-left: auto;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.banner-wrap__right {
+	position: relative;
+	display: inline-block;
+}
+
+.banner-wrap__right {
+	position: relative;
+	display: inline-block;
+}
+
+/* --- Ripple Layers (background waves) --- */
+.banner-wrap__right::before,
+.banner-wrap__right::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: var(--primary-color);
+	transform: translate(-50%, -50%) scale(1);
+	opacity: 0.5;
+}
+
+/* First ripple wave */
+.banner-wrap__right::before {
+	z-index: 1;
+	animation: ripple 1.8s ease-out infinite;
+}
+
+.banner-wrap__right::after {
+	z-index: 2;
+}
+
+.banner-wrap__right .center-dot {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 30px;
+	height: 30px;
+	background-color: var(--primary-color);
+	border-radius: 50%;
+	z-index: 3;
+	cursor: pointer;
+}
+
+.banner-wrap__right .connector {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 1px;
+	height: 0%;
+	border-left: 2px dashed rgb(255, 196, 196);
+	opacity: 1;
+	transition: height 0.3s ease;
+	z-index: 2;
+}
+
+.banner-wrap__right .connector::after {
+	content: 'Currently working at eQuest Solutions.';
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	transform: translate(-50%, 10px);
+	background: #111;
+	color: #fff;
+	font-size: 14px;
+	padding: 6px 10px;
+	border-radius: 6px;
+	opacity: 0;
+	pointer-events: none;
+	transition:
+		opacity 0.3s ease,
+		transform 0.3s ease;
+	white-space: nowrap;
+}
+
+/* --- Hover Effects --- */
+.banner-wrap__right .center-dot:hover ~ .connector {
+	opacity: 1;
+	height: 60%;
+}
+
+.banner-wrap__right .center-dot:hover ~ .connector::after {
+	opacity: 1;
+	transform: translate(-50%, 15px);
+}
+/* --- Ripple Animation --- */
+@keyframes ripple {
+	0% {
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 0.5;
+	}
+	70% {
+		transform: translate(-50%, -50%) scale(2.2);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 0;
+	}
+}
+
+.banner-wrap__left h1 {
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 44px;
+	letter-spacing: 0;
+	margin-bottom: 32px;
+}
+.banner-wrap__left .banner-wrap__desc {
+	margin-bottom: 22px;
+}
+.banner-wrap__left .banner-wrap__desc p {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 25px;
+	letter-spacing: 0;
+	color: var(--secondary-color);
+}
+.banner-wrap__left h1 span {
+	color: var(--primary-color);
+}
+
+@media only screen and (max-width: 767px) {
+	.banner {
+		padding: 80px 0;
+	}
+	.banner-wrap {
+		flex-direction: column;
+	}
+	.banner-wrap__left {
+		max-width: 100%;
+	}
+	.banner-wrap__right {
+		max-width: 80%;
+	}
+}

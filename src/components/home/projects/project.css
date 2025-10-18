@@ -1,0 +1,9 @@
+.projects {
+}
+
+.projects-wrap {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	margin: -8px;
+}
