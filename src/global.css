@@ -57,7 +57,6 @@ body {
 	font-family: var(--primary-font);
 	background: var(--black-color);
 	color: var(--white-color);
-	height: 1000vh;
 }
 
 h1,
@@ -152,6 +151,31 @@ h6,
 .sm-hide {
 	display: block;
 }
+.section-header {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 48px;
+	justify-content: space-between;
+	align-items: center;
+}
+.section-header > h2 {
+	position: relative;
+	font-size: 32px;
+}
+.section-header > h2 span {
+	color: var(--primary-color);
+}
+.section-header > h2::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 150%;
+	right: -160%;
+	height: 1.5px;
+	background-color: var(--primary-color);
+}
+
 @media only screen and (max-width: 991px) {
 	.container {
 		max-width: 720px;

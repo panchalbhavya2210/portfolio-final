@@ -55,3 +55,9 @@
 	color: var(--secondary-color);
 	margin-bottom: 16px;
 }
+
+@media only screen and (max-width: 767px) {
+	.project-card {
+		max-width: 100%;
+	}
+}

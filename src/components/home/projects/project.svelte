@@ -28,6 +28,12 @@
 </script>
 
 <section class="projects">
+	<div class="section-header">
+		<h2>
+			<span>#</span>projects
+		</h2>
+		<a href="/project" class="primary-btn"> View all </a>
+	</div>
 	<div class="projects-wrap">
 		<ProjectCard data={projectData} />
 	</div>

@@ -3,10 +3,12 @@
 }
 header {
 	position: fixed;
+	z-index: 999;
 	top: 0;
 	width: 100%;
 	padding: 20px 20px;
 	transition: var(--transition);
+	backdrop-filter: blur(6px);
 }
 header .container {
 	position: relative;
@@ -156,6 +158,7 @@ header .container {
 		transform: translateX(-100%);
 		transition: var(--transition);
 		padding: 20px 0;
+		z-index: 5;
 	}
 	.header-body {
 		transform: translateX(-100%);
