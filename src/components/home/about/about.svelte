@@ -10,10 +10,10 @@
 	<div class="about-wrap row">
 		<div class="about-wrap__left">
 			<p>
-				Hello, i’m Elias!
+				Hello, i’m Bhavya!
 				<br />
 				<br />
-				I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive websites
+				I’m a self-taught front-end developer based in Gujarat, India. I can develop responsive websites
 				from scratch and raise them into modern user-friendly web experiences.
 				<br />
 				<br />
