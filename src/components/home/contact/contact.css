@@ -1,0 +1,65 @@
+.contact-wrap.row {
+	gap: 32px;
+}
+
+.contact-wrap__left {
+	grid-column: 1 / span 6;
+}
+
+.contact-wrap__right {
+	grid-column: 10 / span 5;
+}
+.contact-wrap__box {
+	border: var(--border);
+	padding: 16px;
+}
+.contact-wrap__header {
+	margin-bottom: 16px;
+}
+.contact-wrap__header h3 {
+	font-weight: bold;
+}
+.contact-wrap__links a {
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+	color: var(--secondary-color);
+	transition: var(--transition);
+}
+.contact-wrap__links a > * {
+	flex-shrink: 0;
+}
+.contact-wrap__links a:hover {
+	opacity: 0.5;
+}
+.contact-wrap__links a:last-child {
+	margin-bottom: 0;
+}
+.contact-wrap__links a > div {
+	grid-column: span 1;
+}
+
+.contact-wrap__links a .icon {
+	max-width: 24px;
+	height: auto;
+	margin-right: 8px;
+}
+
+.contact-wrap__links a .icon img {
+	display: block;
+}
+
+@media only screen and (max-width: 991px) {
+	.contact-wrap__right {
+		grid-column: 8 / span 5;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.contact-wrap.row {
+		gap: 32px 0;
+	}
+	.contact-wrap__left,
+	.contact-wrap__right {
+		grid-column: span 12;
+	}
+}

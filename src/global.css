@@ -145,11 +145,18 @@ h6,
 	padding: 0 20px;
 	margin: 0 auto;
 }
+.row {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+}
 .lg-hide {
 	display: none;
 }
 .sm-hide {
 	display: block;
+}
+.section-padding {
+	padding: 60px 0;
 }
 .section-header {
 	display: flex;
@@ -194,5 +201,11 @@ h6,
 	}
 	.container {
 		max-width: 520px;
+	}
+	.section-padding {
+		padding: 30px 0;
+	}
+	.section-header > h2::after {
+		display: none;
 	}
 }

@@ -1,6 +1,8 @@
 <script>
 	import './header.css';
-	import Testy from '../../assets/images/test.svg';
+	import Github from '../../assets/images/test.svg';
+	import Linkedin from '../../assets/images/linkedin-svg.svg';
+	import Instagram from '../../assets/images/instagram-svg.svg';
 	import { onMount, onDestroy } from 'svelte';
 
 	const Links = [
@@ -11,16 +13,21 @@
 	];
 
 	const socialLinks = [
-		{ id: 1, socialIcon: Testy, socialIconSeoName: 'Github', socialIconLink: 'https://github.com' },
 		{
-			id: 2,
-			socialIcon: Testy,
-			socialIconSeoName: 'LinkedIn',
+			id: 1,
+			socialIcon: Github,
+			socialIconSeoName: 'Github',
 			socialIconLink: 'https://github.com'
 		},
 		{
+			id: 2,
+			socialIcon: Linkedin,
+			socialIconSeoName: 'LinkedIn',
+			socialIconLink: 'https://linkedin.com/in/bhavyapanchal'
+		},
+		{
 			id: 3,
-			socialIcon: Testy,
+			socialIcon: Instagram,
 			socialIconSeoName: 'Instagram',
 			socialIconLink: 'https://github.com'
 		}

@@ -3,21 +3,22 @@
 }
 
 .banner-wrap {
-	display: flex;
+	display: grid;
 	align-items: center;
-	justify-content: space-between;
+	grid-template-columns: repeat(12, 1fr);
 	flex-wrap: wrap;
 	width: 100%;
+	gap: 32px;
+	padding: 0 12px;
 }
 
 .banner-wrap__left {
 	width: 100%;
-	max-width: 60%;
-	padding-right: 40px;
+	grid-column: 1 / span 6;
 }
 .banner-wrap__right {
 	width: 100%;
-	max-width: 40%;
+	grid-column: 10 / span 6;
 	position: relative;
 }
 .banner-wrap__right img {
@@ -41,7 +42,7 @@
 .banner-wrap__right::after {
 	content: '';
 	position: absolute;
-	top: 50%;
+	top: 0%;
 	left: 50%;
 	width: 30px;
 	height: 30px;
@@ -63,7 +64,7 @@
 
 .banner-wrap__right .center-dot {
 	position: absolute;
-	top: 50%;
+	top: 0%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 30px;
@@ -76,7 +77,7 @@
 
 .banner-wrap__right .connector {
 	position: absolute;
-	top: 50%;
+	top: 0%;
 	left: 50%;
 	transform: translate(-50%, 0);
 	width: 1px;
@@ -88,7 +89,7 @@
 }
 
 .banner-wrap__right .connector::after {
-	content: 'Currently working at eQuest Solutions.';
+	content: 'Available For Hire.';
 	position: absolute;
 	top: 90%;
 	left: 50%;
@@ -109,7 +110,7 @@
 /* --- Hover Effects --- */
 .banner-wrap__right .center-dot:hover ~ .connector {
 	opacity: 1;
-	height: 60%;
+	height: 40%;
 }
 
 .banner-wrap__right .center-dot:hover ~ .connector::after {
@@ -158,12 +159,12 @@
 		padding: 80px 0;
 	}
 	.banner-wrap {
-		flex-direction: column;
+		gap: 0;
 	}
 	.banner-wrap__left {
-		max-width: 100%;
+		grid-column: span 12;
 	}
 	.banner-wrap__right {
-		max-width: 80%;
+		grid-column: span 12;
 	}
 }

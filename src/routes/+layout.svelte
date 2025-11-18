@@ -1,4 +1,5 @@
 <script>
+	import Footer from '../components/footer/footer.svelte';
 	import Header from '../components/header/header.svelte';
 	// import favicon from '/favicon.svg';
 	import '../font-face.css';
@@ -15,4 +16,5 @@
 <main>
 	<Header />
 	{@render children?.()}
+	<Footer />
 </main>
