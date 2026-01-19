@@ -21,11 +21,6 @@
 			icon: GitIcon,
 			link: 'https://github.com/panchalbhavya2210',
 			linkName: 'Github'
-		},
-		{
-			icon: Instagram,
-			link: 'https://instagram.com',
-			linkName: '@bhavya_2210'
 		}
 	];
 </script>

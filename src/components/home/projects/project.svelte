@@ -23,7 +23,7 @@
 	];
 </script>
 
-<section class="projects section-padding">
+<section class="projects section-padding" id="projects">
 	<div class="section-header">
 		<h2>
 			<span>#</span>projects

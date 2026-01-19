@@ -6,10 +6,10 @@
 	import { onMount, onDestroy } from 'svelte';
 
 	const Links = [
-		{ id: 1, linkName: '#home', linkTO: '/', seoName: 'Home' },
-		{ id: 2, linkName: '#works', linkTO: '/projects', seoName: 'Projects' },
-		{ id: 3, linkName: '#about-me', linkTO: '/about-me', seoName: 'About Me' },
-		{ id: 4, linkName: '#contact', linkTO: '/contact', seoName: 'Contact' }
+		{ id: 1, linkName: '#home', linkTO: '#', seoName: 'Home' },
+		{ id: 2, linkName: '#works', linkTO: '#projects', seoName: 'Projects' },
+		{ id: 3, linkName: '#about-me', linkTO: '#about-me', seoName: 'About Me' },
+		{ id: 4, linkName: '#contact', linkTO: '#contact', seoName: 'Contact' }
 	];
 
 	const socialLinks = [
@@ -17,19 +17,13 @@
 			id: 1,
 			socialIcon: Github,
 			socialIconSeoName: 'Github',
-			socialIconLink: 'https://github.com'
+			socialIconLink: 'https://github.com/panchalbhavya2210'
 		},
 		{
 			id: 2,
 			socialIcon: Linkedin,
 			socialIconSeoName: 'LinkedIn',
 			socialIconLink: 'https://linkedin.com/in/bhavyapanchal'
-		},
-		{
-			id: 3,
-			socialIcon: Instagram,
-			socialIconSeoName: 'Instagram',
-			socialIconLink: 'https://github.com'
 		}
 	];
 

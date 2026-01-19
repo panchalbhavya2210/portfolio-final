@@ -3,7 +3,7 @@
 	import PillImage from '../../../assets/images/pill-image.webp';
 </script>
 
-<section class="about section-padding">
+<section class="about section-padding" id="about-me">
 	<div class="section-header">
 		<h2><span>#</span>about-me</h2>
 	</div>
